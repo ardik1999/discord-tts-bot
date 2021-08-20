@@ -25,7 +25,7 @@ class LangsCommand extends Command {
     
       To change language, use **${this.client.prefix}lang <lang_code>**.`)
       .setThumbnail(MESSAGE_EMBED.langThumbnail)
-      .setURL(MESSAGE_EMBED.langURL);
+
 
     const content = this.sortedLanguageKeys().map((key) => {
       const cur = languages[key];
