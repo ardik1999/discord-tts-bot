@@ -36,7 +36,7 @@ class HelpCommand extends Command {
       embed.addField(field.title, field.text);
     }
 
-    embed.addField('Spotted a bug?', `This bot is far from perfect, so in case you found a bug, please report it in this bot's [**GitHub Issues Page**](${MESSAGE_EMBED.helpURL}).`);
+   
 
     return message.channel.send(embed);
   }
