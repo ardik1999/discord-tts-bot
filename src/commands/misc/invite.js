@@ -1,5 +1,3 @@
-import { Invite } from "discord.js";
-
 const { Command, Discord } = require('@greencoast/discord.js-extended');
 const { MessageEmbed } = require('discord.js');
 const { MESSAGE_EMBED } = require('../../common/constants');
