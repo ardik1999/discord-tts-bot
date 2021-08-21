@@ -1,0 +1,37 @@
+const { Command } = require('@greencoast/discord.js-extended');
+const logger = require('@greencoast/logger');
+
+
+class invite extends Command {
+  constructor(client) {
+    super(client, {
+      name: 'invite',
+      aliases: ['moonbase'],
+      description: 'invite bot',
+      emoji: ':robot:',
+      group: 'other-tts',
+      guildOnly: true
+    });
+  }
+
+  run(client, message, args, user, text, prefix) {
+    try {
+      var embed = new Discord.MessageEmbed()
+
+        .setTitle(":heart: Thanks for inviting me!")
+        .setURL(`https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`)
+        .setDescription(`[Click here](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)`)
+      message.channel.send(embed);
+
+    } catch (e) {
+      console.log(String(e.stack).bgRed)
+
+      var embed = new Discord.MessageEmbed()
+        .setTitle(`${emoji.msg.ERROR} ERROR | An error occurred`)
+        .setDescription(`\`\`\`${e.message}\`\`\``)
+
+      return message.channel.send(embed);
+    }
+  }
+
+module.exports = invite;
