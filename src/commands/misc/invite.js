@@ -2,7 +2,7 @@ const { Command, Discord } = require('@greencoast/discord.js-extended');
 const { MessageEmbed } = require('discord.js');
 const { MESSAGE_EMBED } = require('../../common/constants');
 
-class invite extends Command {
+class Invite extends Command {
   constructor(client) {
     super(client, {
       name: 'invite',
