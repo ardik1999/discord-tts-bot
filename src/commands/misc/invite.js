@@ -2,7 +2,7 @@ const { Command, Discord } = require('@greencoast/discord.js-extended');
 const { MessageEmbed } = require('discord.js');
 const { MESSAGE_EMBED } = require('../../common/constants');
 
-class HelpCommand extends Command {
+class invite extends Command {
   constructor(client) {
     super(client, {
       name: 'invite',
@@ -21,8 +21,8 @@ class HelpCommand extends Command {
       var embed = new Discord.MessageEmbed()
 
         .setTitle(":heart: Thanks for inviting me!")
-        .setURL(`https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`)
-        .setDescription(`[Click here](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)`)
+        .setURL(`https://discord.com/api/oauth2/authorize?client_id=737826514250498080&permissions=8&scope=bot`)
+        .setDescription(`[Click here](https://discord.com/api/oauth2/authorize?client_id=737826514250498080&permissions=8&scope=bot)`)
       message.channel.send(embed);
 
     } catch (e) {
